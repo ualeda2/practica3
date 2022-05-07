@@ -72,7 +72,7 @@ Escribimos un mensaje apropiado con los cambios que hemos hecho, y click en Comm
 Los archivos ya están guardados en la rama `main` en el repositorio git *local*.
 
 
-== Configuración del repositorio remoto de GitHub y subida con _Push_
+== Configuración del remoto de GitHub y subida con `push`
 
 Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio (_privado_). 
 

@@ -1,7 +1,7 @@
 ////
 Nombre y título del trabajo
 ////
-= PRÁCTICA 3 – Estructura del Proyecto Eclipse en el repositorio GitHub
+= EDA II – Prácticas en repositorio GitHub y generación de JavaDoc
 :navtitle: Introducción
 
 // Bloque para GitHub, para que al visualizar el .adoc encuentre las figuras.
@@ -20,18 +20,24 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 ////
 == Objetivos
 ====
-* Mostrar la *estructura correcta del proyecto* Eclipse para su entrega.
+* Mostrar la *estructura correcta del proyecto* Eclipse para su entrega y evaluación.
 * Describir la correcta ubicación del proyecto Eclipse dentro del respositorio GitHub.
 * Aprender a generar automaticamente la *documentación en Javadoc*, incluyendo *diagramas de clases*, mediante *Maven*.
 ====
 
 == Introducción
  
-Este tutorial pretende explicar la estructura correcta de los proyectos para la entrega de las prácticas de EDA II. Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado. Las carpetas que debe tener nuestro proyecto son las siguientes:
+Este tutorial pretende explicar la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II. 
 
-* `src`:  Carpeta de fuentes (source folder en Eclipse) que contendrá las clases Java en las que implementamos y resolvermos los algoritmos. Dentro de la carpeta `src` crearemos un paquete con un nombre, como por ejemplo, `org.eda2.practicaX`,  sustituyendo `X` por el número de práctica.
+== Estructura del Proyecto Java en Eclipse
 
-* `test`: Carpeta de fuentes (source folder en Eclipse) con las clases de prueba con tests unitarios en JUnit (en el caso de que los haya). Igualmente, las clases de prueba estarán dentro de un paquete con el mismo nombre que el de `src`.
+Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado.
+
+Las carpetas que debe tener nuestro proyecto son las siguientes:
+
+* `src`:  Carpeta de fuentes (_source folder_ en Eclipse) que contendrá las clases Java en las que implementamos y resolvermos los algoritmos. Dentro de la carpeta `src` las clases Java estarán dentro de un paquete con un nombre, por ejemplo, `org.eda2.practicaX`,  sustituyendo `X` por el número de práctica.
+
+* `test`: Carpeta de fuentes (_source folder_ en Eclipse) con las clases de prueba con tests unitarios en JUnit (en el caso de que los haya). Igualmente, las clases de prueba estarán dentro de un paquete con el mismo nombre que el de `src`.
 
 Hasta ahora se ha descrito la estructura habitual de los proyectos Java en Eclipse. Además, vamos a tener las siguientes carpetas: 
 
@@ -51,13 +57,13 @@ El proyecto Eclipse de cada práctica se debe guardar como una carpeta con el no
 .Proyecto subido al repo correctamente
 image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=440,pdfwidth=40%,align="center"]
 
-Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial link:eclipseGiBasic.html[Uso básico de Git y GitHub en Eclipse].
+Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial link:eclipseGitBasic.html[Uso básico de Git y GitHub en Eclipse].
 
 == Generación de JavaDoc con Maven
 
-https://es.wikipedia.org/wiki/Maven[Maven] es una herramienta open-source que permite simplificar y automatizar el proceso de construcción (`build`) de un proyecto Java. La construcción implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc., a partir del código fuente. Maven además permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto. 
+https://es.wikipedia.org/wiki/Maven[Maven] es una herramienta que permite simplificar y automatizar el proceso de construcción (`build`) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc.. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto. 
 
-En las prácticas vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.
+En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.
  
 A continuación se describen los pasos necesarios. 
 
@@ -73,7 +79,7 @@ image::mavenizedProjectPom.png[Proyecto mavenizado, archivo `pom.xml`,width=340,
 
 === Configuración básica del `pom.xml`
 
-Lo primero es configurar el proyecto con codificación `UTF-8`, para permitir portabilidad entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicarle  dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo `pom.xml` y añadimos las siguientes líneas.
+Lo primero es configurar el `pom.xml` del proyecto para que utilice codificación `UTF-8`. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo `pom.xml` y añadimos las siguientes líneas.
 
 [source,xml,subs="verbatim,quotes"]
 ----
@@ -81,12 +87,8 @@ Lo primero es configurar el proyecto con codificación `UTF-8`, para permitir po
 <version>0.0.1-SNAPSHOT</version>
 
 *<properties> <1>
-  <project.build.sourceEncoding>
-    UTF-8
-  </project.build.sourceEncoding>
-  <project.reporting.outputEncoding>
-    UTF-8
-  </project.reporting.outputEncoding>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 </properties>*
 
 <build>
@@ -101,7 +103,7 @@ Lo primero es configurar el proyecto con codificación `UTF-8`, para permitir po
 
 [IMPORTANT]
 ====
-No olvides configurar tu Eclipse para que utilice UTF-8 como codificación predeterminada: _Window_ > _Preferencies_ > _General_ > _Workspace_ > _Text file encoding_ > _Other_ > _UTF-8_
+Además, no olvides configurar tu Eclipse para que utilice UTF-8 como codificación predeterminada: _Window_ > _Preferencies_ > _General_ > _Workspace_ > _Text file encoding_ > _Other_ > _UTF-8_
 
 [#fig12]
 .Configuración de la codificación UTF-8 en Eclipse
@@ -115,9 +117,9 @@ Si en el proyecto aparecen errores (archivos en rojo) tras la modificación del 
 
 === Generación del JavaDoc
 
-Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin javadoc al `pom.xml`, y a continuación llamaremos al objetivo (`goal`) de maven `javadoc:javadoc`. Esto generará la documentación en formato `html`de nuestras clases en la carpeta predeterminada `target/site/apidocs` del proyecto.
+Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin javadoc al `pom.xml`, y a continuación llamaremos al objetivo (`goal`) de maven `javadoc:javadoc`. Esto generará la documentación de las clases Java en formato `html` en la carpeta predeterminada `target/site/apidocs` del proyecto.
 
-Editamos el archivo `pom.xml` y en el bloque de plugins añadimos el plugin de JavaDoc:
+Para ello, editamos el archivo `pom.xml` y en el bloque de plugins añadimos el plugin de JavaDoc:
 
 [source,xml,subs="verbatim,quotes"]
 ----
@@ -137,17 +139,17 @@ Editamos el archivo `pom.xml` y en el bloque de plugins añadimos el plugin de J
 </project>
 ----
 
-Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, _Run as..._ , _Maven build_. En el campo Goals : *clean javadoc:javadoc*.
+Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, _Run as..._ , _Maven build_. En el campo Goals escribimos: *clean javadoc:javadoc*
 
 [#fig13]
 .Ejecución de javadoc con Maven
 image::runAsMavenCleanJavadoc.png[Run As, Maven Build... clean javadoc:javadoc,width=540,pdfwidth=60%,align="center"]
 
-El resultado se genera de forma predeterminada en la carpeta `target/site/apidocs`. Para ver la documentación, abre el archivo `index.html`.
+Los archivos JavaDoc que se obtienen tras la ejecución de Maven se guardan de forma predeterminada en la carpeta `target/site/apidocs`. Para ver la documentación, abre el archivo `index.html` de esa carpeta.
 
 [WARNING]
 ====
-La carpeta `target` no se debe guardar en el respositorio Git ni subir a GitHub. Git ignora está carpeta porque se encuentra dentro del archivo `.gitignore`.
+La carpeta `target` *nunca* se guarda en el respositorio Git, ni se sube a GitHub. Git ignora está carpeta porque se encuentra dentro del archivo `.gitignore`.
 ====
 
 === Generación de diagramas de clases
@@ -155,57 +157,60 @@ La carpeta `target` no se debe guardar en el respositorio Git ni subir a GitHub.
 Documentar tu proyecto es una parte importante del buen desarrollo de software. Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente diagramas UML a partir del código.
 
 [#fig14]
-.Algoritmo completado...
-image::featureComplete_comic.png[Feature complete...,width=540,pdfwidth=60%,align="center"]
+.Trabajo completado... ¿Seguro?
+image::featureComplete_comic.jpeg[Feature complete...,width=540,pdfwidth=60%,align="center"]
 
 [WARNING]
 ====
-Estos pasos solamente los podrás hacer en tu propio PC o portátil, ya que los PCs del Aula no tienen instalada la herramienta Graphviz. 
+Estos pasos solamente los podrás hacer en tu propio PC o portátil, ya que los PCs del Aula no tienen instalada la herramienta Graphviz necesaria. 
 ====
 
-Primero, descarga e instala desde: http://www.graphviz.org/download/
+Primero, descarga e instala Grahpviz en tu portátil desde: http://www.graphviz.org/download/
 
-A continuación, actualiza la configuración del plugin JavaDoc en el archivo `pom.xml` para que genere también los diagramas de clase. 
-
+A continuación, actualiza la configuración del plugin JavaDoc en el archivo `pom.xml` para que genere también los diagramas de clases. Y añade la dependencia al plugin necesario `umldoclet`.
 
 [source,xml,subs="verbatim,quotes"]
 ----
 ...
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-javadoc-plugin</artifactId>
-    <version>3.4.0</version>
-    *<configuration>
-      <reportOutputDirectory>
-        ${project.reporting.outputDirectory}/../../docs
-      </reportOutputDirectory>
-      <doclet>
-        nl.talsmasoftware.umldoclet.UMLDoclet
-      </doclet>
-      <docletArtifact>
-        <groupId>nl.talsmasoftware</groupId>
-	    <artifactId>umldoclet</artifactId>
-		<version>2.0.16</version>
-	  </docletArtifact>
-	  <additionalOptions>
-	    <!-- Para generar los .png para la memoria, 
-        descomentar -umlImageDirectory y -umlImageFormat -->
-		<!-- <additionalOption>
-          -umlImageDirectory images
-        </additionalOption> -->
-		<!-- <additionalOption>
-          -umlImageFormat png
-        </additionalOption> -->
-        <additionalOption>
-          -private
-        </additionalOption>
-	  </additionalOptions>
-	</configuration>*
-  </plugin>
-...
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.0</version>
+        *<configuration> <1>
+          <reportOutputDirectory>
+            ${project.reporting.outputDirectory}/../../docs
+          </reportOutputDirectory>
+          <doclet>nl.talsmasoftware.umldoclet.UMLDoclet</doclet>
+          <docletArtifact>
+            <groupId>nl.talsmasoftware</groupId>
+	          <artifactId>umldoclet</artifactId>
+    		    <version>2.0.16</version>
+	        </docletArtifact>
+	        <additionalOptions>
+    	      <!-- Para generar los .png para la memoria, descomentar estas 2 lineas-->
+		        <!-- <additionalOption>-umlImageDirectory images</additionalOption> -->
+		        <!-- <additionalOption>-umlImageFormat png      </additionalOption> -->
+            <additionalOption>-private</additionalOption>
+	        </additionalOptions>
+	      </configuration>*
+		  </plugin>
+	  </plugins>
+  </build>
+  *<dependencies> <2>
+    <!-- https://mvnrepository.com/artifact/nl.talsmasoftware/umldoclet -->
+    <dependency>
+      <groupId>nl.talsmasoftware</groupId>
+      <artifactId>umldoclet</artifactId>
+      <version>2.0.16</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>*
+</project>
 ----
+<1> Bloque de configuración del plugin javadoc para que genere los diagrama UML
+<2> Bloque de dependencias necesarias para la generación de los diagrama UML
 
-Guarda los cambios y vuelve a ejecutar maven. Ahora los JavaDoc se crean en la carpeta `docs/apidocs` que deberás subir también al repositorio. Verás que en tus JavaDoc se incluyen los diagramas de clases.
+Guarda los cambios y vuelve a ejecutar maven. Ahora los JavaDoc se crean en la carpeta `docs/apidocs` que deberás proteger en el repositorio. Verás que tus JavaDoc incluyen los diagramas de clases.
 
 [#fig15]
 .Ejemplo de diagramas de clases generados
@@ -216,6 +221,7 @@ image::apidocsClassDiagrams.png[Ejemplo de diagramas de clases,width=640,pdfwidt
 Recuerda que si en el proyecto aparecen errores (archivos en rojo) tras la modificación del `pom.xml`, se debe actualizar el proyecto Maven: sobre el proyecto, botón derecho, _Maven_ > _Update Project_.
 ====
 
+Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente. 
 
 == Descarga del .zip y subida en Aula Virtual
 
@@ -225,5 +231,5 @@ Recuerda que para la entrega de cada práctica, debes descargar el `.zip` del re
 .Descarga del .zip desde el repositorio GitHub
 image::github_download_zip.png[,width=340,pdfwidth=40%,align="center"]
 
-El `.zip` que descargar desde GitHub incluye la práctica a entregar junto con las prácticas an anteriores, ya que todas están en el mismo repositorio. *No te preocupes* por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente en cada entrega.
+El `.zip` que descargar desde GitHub incluye la práctica a entregar junto con las prácticas anteriores, ya que todas están en el mismo repositorio. *No te preocupes* por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente a cada entrega.
 

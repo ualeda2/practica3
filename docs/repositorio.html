@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
 <meta name="keywords" content="EDAII Algoritmos">
-<title>PRÁCTICA 3 – Estructura del Proyecto Eclipse en el repositorio GitHub</title>
+<title>EDA II – Prácticas en el repositorio GitHub y generación de JavaDoc</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -655,12 +655,13 @@ pre.rouge {
 </head>
 <body class="article toc2 toc-right text-justify">
 <div id="header">
-<h1>PRÁCTICA 3 – Estructura del Proyecto Eclipse en el repositorio GitHub</h1>
+<h1>EDA II – Prácticas en el repositorio GitHub y generación de JavaDoc</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Tabla de contenidos</div>
 <ul class="sectlevel1">
 <li><a href="#_objetivos">Objetivos</a></li>
 <li><a href="#_introducción">Introducción</a></li>
+<li><a href="#_estructura_del_proyecto_java_en_eclipse">Estructura del Proyecto Java en Eclipse</a></li>
 <li><a href="#_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</a>
 <ul class="sectlevel2">
 <li><a href="#_mavenizar_el_proyecto">Mavenizar el proyecto</a></li>
@@ -692,7 +693,7 @@ pre.rouge {
 <div class="ulist">
 <ul>
 <li>
-<p>Mostrar la <strong>estructura correcta del proyecto</strong> Eclipse para su entrega.</p>
+<p>Mostrar la <strong>estructura correcta del proyecto</strong> Eclipse para su entrega y evaluación.</p>
 </li>
 <li>
 <p>Describir la correcta ubicación del proyecto Eclipse dentro del respositorio GitHub.</p>
@@ -710,15 +711,26 @@ pre.rouge {
 <h2 id="_introducción">Introducción</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este tutorial pretende explicar la estructura correcta de los proyectos para la entrega de las prácticas de EDA II. Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado. Las carpetas que debe tener nuestro proyecto son las siguientes:</p>
+<p>Este tutorial pretende explicar la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_estructura_del_proyecto_java_en_eclipse">Estructura del Proyecto Java en Eclipse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado.</p>
+</div>
+<div class="paragraph">
+<p>Las carpetas que debe tener nuestro proyecto son las siguientes:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>src</code>:  Carpeta de fuentes (source folder en Eclipse) que contendrá las clases Java en las que implementamos y resolvermos los algoritmos. Dentro de la carpeta <code>src</code> crearemos un paquete con un nombre, como por ejemplo, <code>org.eda2.practicaX</code>,  sustituyendo <code>X</code> por el número de práctica.</p>
+<p><code>src</code>:  Carpeta de fuentes (<em>source folder</em> en Eclipse) que contendrá las clases Java en las que implementamos y resolvermos los algoritmos. Dentro de la carpeta <code>src</code> las clases Java estarán dentro de un paquete con un nombre, por ejemplo, <code>org.eda2.practicaX</code>,  sustituyendo <code>X</code> por el número de práctica.</p>
 </li>
 <li>
-<p><code>test</code>: Carpeta de fuentes (source folder en Eclipse) con las clases de prueba con tests unitarios en JUnit (en el caso de que los haya). Igualmente, las clases de prueba estarán dentro de un paquete con el mismo nombre que el de <code>src</code>.</p>
+<p><code>test</code>: Carpeta de fuentes (<em>source folder</em> en Eclipse) con las clases de prueba con tests unitarios en JUnit (en el caso de que los haya). Igualmente, las clases de prueba estarán dentro de un paquete con el mismo nombre que el de <code>src</code>.</p>
 </li>
 </ul>
 </div>
@@ -754,7 +766,7 @@ pre.rouge {
 <div class="title">Figura 2. Proyecto subido al repo correctamente</div>
 </div>
 <div class="paragraph">
-<p>Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial <a href="eclipseGiBasic.html">Uso básico de Git y GitHub en Eclipse</a>.</p>
+<p>Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial <a href="eclipseGitBasic.html">Uso básico de Git y GitHub en Eclipse</a>.</p>
 </div>
 </div>
 </div>
@@ -762,10 +774,10 @@ pre.rouge {
 <h2 id="_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://es.wikipedia.org/wiki/Maven">Maven</a> es una herramienta open-source que permite simplificar y automatizar el proceso de construcción (<code>build</code>) de un proyecto Java. La construcción implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc., a partir del código fuente. Maven además permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto.</p>
+<p><a href="https://es.wikipedia.org/wiki/Maven">Maven</a> es una herramienta que permite simplificar y automatizar el proceso de construcción (<code>build</code>) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc.. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto.</p>
 </div>
 <div class="paragraph">
-<p>En las prácticas vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.</p>
+<p>En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.</p>
 </div>
 <div class="paragraph">
 <p>A continuación se describen los pasos necesarios.</p>
@@ -788,7 +800,7 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_configuración_básica_del_pom_xml">Configuración básica del <code>pom.xml</code></h3>
 <div class="paragraph">
-<p>Lo primero es configurar el proyecto con codificación <code>UTF-8</code>, para permitir portabilidad entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicarle  dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo <code>pom.xml</code> y añadimos las siguientes líneas.</p>
+<p>Lo primero es configurar el <code>pom.xml</code> del proyecto para que utilice codificación <code>UTF-8</code>. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo <code>pom.xml</code> y añadimos las siguientes líneas.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -796,12 +808,8 @@ pre.rouge {
 <span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
 
 <strong><span class="nt">&lt;properties&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
-  <span class="nt">&lt;project.build.sourceEncoding&gt;</span>
-    UTF-8
-  <span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
-  <span class="nt">&lt;project.reporting.outputEncoding&gt;</span>
-    UTF-8
-  <span class="nt">&lt;/project.reporting.outputEncoding&gt;</span>
+  <span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+  <span class="nt">&lt;project.reporting.outputEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.reporting.outputEncoding&gt;</span>
 <span class="nt">&lt;/properties&gt;</span></strong>
 
 <span class="nt">&lt;build&gt;</span>
@@ -832,7 +840,7 @@ pre.rouge {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>No olvides configurar tu Eclipse para que utilice UTF-8 como codificación predeterminada: <em>Window</em> &gt; <em>Preferencies</em> &gt; <em>General</em> &gt; <em>Workspace</em> &gt; <em>Text file encoding</em> &gt; <em>Other</em> &gt; <em>UTF-8</em></p>
+<p>Además, no olvides configurar tu Eclipse para que utilice UTF-8 como codificación predeterminada: <em>Window</em> &gt; <em>Preferencies</em> &gt; <em>General</em> &gt; <em>Workspace</em> &gt; <em>Text file encoding</em> &gt; <em>Other</em> &gt; <em>UTF-8</em></p>
 </div>
 <div id="fig12" class="imageblock text-center">
 <div class="content">
@@ -862,10 +870,10 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_generación_del_javadoc">Generación del JavaDoc</h3>
 <div class="paragraph">
-<p>Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin javadoc al <code>pom.xml</code>, y a continuación llamaremos al objetivo (<code>goal</code>) de maven <code>javadoc:javadoc</code>. Esto generará la documentación en formato <code>html`de nuestras clases en la carpeta predeterminada `target/site/apidocs</code> del proyecto.</p>
+<p>Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin javadoc al <code>pom.xml</code>, y a continuación llamaremos al objetivo (<code>goal</code>) de maven <code>javadoc:javadoc</code>. Esto generará la documentación de las clases Java en formato <code>html</code> en la carpeta predeterminada <code>target/site/apidocs</code> del proyecto.</p>
 </div>
 <div class="paragraph">
-<p>Editamos el archivo <code>pom.xml</code> y en el bloque de plugins añadimos el plugin de JavaDoc:</p>
+<p>Para ello, editamos el archivo <code>pom.xml</code> y en el bloque de plugins añadimos el plugin de JavaDoc:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -886,7 +894,7 @@ pre.rouge {
 </div>
 </div>
 <div class="paragraph">
-<p>Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, <em>Run as&#8230;&#8203;</em> , <em>Maven build</em>. En el campo Goals : <strong>clean javadoc:javadoc</strong>.</p>
+<p>Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, <em>Run as&#8230;&#8203;</em> , <em>Maven build</em>. En el campo Goals escribimos: <strong>clean javadoc:javadoc</strong></p>
 </div>
 <div id="fig13" class="imageblock text-center">
 <div class="content">
@@ -895,7 +903,7 @@ pre.rouge {
 <div class="title">Figura 5. Ejecución de javadoc con Maven</div>
 </div>
 <div class="paragraph">
-<p>El resultado se genera de forma predeterminada en la carpeta <code>target/site/apidocs</code>. Para ver la documentación, abre el archivo <code>index.html</code>.</p>
+<p>Los archivos JavaDoc que se obtienen tras la ejecución de Maven se guardan de forma predeterminada en la carpeta <code>target/site/apidocs</code>. Para ver la documentación, abre el archivo <code>index.html</code> de esa carpeta.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -905,7 +913,7 @@ pre.rouge {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>La carpeta <code>target</code> no se debe guardar en el respositorio Git ni subir a GitHub. Git ignora está carpeta porque se encuentra dentro del archivo <code>.gitignore</code>.</p>
+<p>La carpeta <code>target</code> <strong>nunca</strong> se guarda en el respositorio Git, ni se sube a GitHub. Git ignora está carpeta porque se encuentra dentro del archivo <code>.gitignore</code>.</p>
 </div>
 </td>
 </tr>
@@ -919,9 +927,9 @@ pre.rouge {
 </div>
 <div id="fig14" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/featureComplete_comic.png" alt="Feature complete&#8230;&#8203;" width="540">
+<img src="modules/ROOT/images/featureComplete_comic.jpeg" alt="Feature complete&#8230;&#8203;" width="540">
 </div>
-<div class="title">Figura 6. Algoritmo completado&#8230;&#8203;</div>
+<div class="title">Figura 6. Trabajo completado&#8230;&#8203; ¿Seguro?</div>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -931,57 +939,71 @@ pre.rouge {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Estos pasos solamente los podrás hacer en tu propio PC o portátil, ya que los PCs del Aula no tienen instalada la herramienta Graphviz.</p>
+<p>Estos pasos solamente los podrás hacer en tu propio PC o portátil, ya que los PCs del Aula no tienen instalada la herramienta Graphviz necesaria.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Primero, descarga e instala desde: <a href="http://www.graphviz.org/download/" class="bare">http://www.graphviz.org/download/</a></p>
+<p>Primero, descarga e instala Grahpviz en tu portátil desde: <a href="http://www.graphviz.org/download/" class="bare">http://www.graphviz.org/download/</a></p>
 </div>
 <div class="paragraph">
-<p>A continuación, actualiza la configuración del plugin JavaDoc en el archivo <code>pom.xml</code> para que genere también los diagramas de clase.</p>
+<p>A continuación, actualiza la configuración del plugin JavaDoc en el archivo <code>pom.xml</code> para que genere también los diagramas de clases. Y añade la dependencia al plugin necesario <code>umldoclet</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="xml">...
-  <span class="nt">&lt;plugin&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>maven-javadoc-plugin<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>3.4.0<span class="nt">&lt;/version&gt;</span>
-    <strong><span class="nt">&lt;configuration&gt;</span>
-      <span class="nt">&lt;reportOutputDirectory&gt;</span>
-        ${project.reporting.outputDirectory}/../../docs
-      <span class="nt">&lt;/reportOutputDirectory&gt;</span>
-      <span class="nt">&lt;doclet&gt;</span>
-        nl.talsmasoftware.umldoclet.UMLDoclet
-      <span class="nt">&lt;/doclet&gt;</span>
-      <span class="nt">&lt;docletArtifact&gt;</span>
-        <span class="nt">&lt;groupId&gt;</span>nl.talsmasoftware<span class="nt">&lt;/groupId&gt;</span>
-	    <span class="nt">&lt;artifactId&gt;</span>umldoclet<span class="nt">&lt;/artifactId&gt;</span>
-		<span class="nt">&lt;version&gt;</span>2.0.16<span class="nt">&lt;/version&gt;</span>
-	  <span class="nt">&lt;/docletArtifact&gt;</span>
-	  <span class="nt">&lt;additionalOptions&gt;</span>
-	    <span class="c">&lt;!-- Para generar los .png para la memoria,
-        descomentar -umlImageDirectory y -umlImageFormat --&gt;</span>
-		<span class="c">&lt;!-- &lt;additionalOption&gt;
-          -umlImageDirectory images
-        &lt;/additionalOption&gt; --&gt;</span>
-		<span class="c">&lt;!-- &lt;additionalOption&gt;
-          -umlImageFormat png
-        &lt;/additionalOption&gt; --&gt;</span>
-        <span class="nt">&lt;additionalOption&gt;</span>
-          -private
-        <span class="nt">&lt;/additionalOption&gt;</span>
-	  <span class="nt">&lt;/additionalOptions&gt;</span>
-	<span class="nt">&lt;/configuration&gt;</span></strong>
-  <span class="nt">&lt;/plugin&gt;</span>
-...</code></pre>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-javadoc-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>3.4.0<span class="nt">&lt;/version&gt;</span>
+        <strong><span class="nt">&lt;configuration&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+          <span class="nt">&lt;reportOutputDirectory&gt;</span>
+            ${project.reporting.outputDirectory}/../../docs
+          <span class="nt">&lt;/reportOutputDirectory&gt;</span>
+          <span class="nt">&lt;doclet&gt;</span>nl.talsmasoftware.umldoclet.UMLDoclet<span class="nt">&lt;/doclet&gt;</span>
+          <span class="nt">&lt;docletArtifact&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>nl.talsmasoftware<span class="nt">&lt;/groupId&gt;</span>
+	          <span class="nt">&lt;artifactId&gt;</span>umldoclet<span class="nt">&lt;/artifactId&gt;</span>
+    		    <span class="nt">&lt;version&gt;</span>2.0.16<span class="nt">&lt;/version&gt;</span>
+	        <span class="nt">&lt;/docletArtifact&gt;</span>
+	        <span class="nt">&lt;additionalOptions&gt;</span>
+    	      <span class="c">&lt;!-- Para generar los .png para la memoria, descomentar estas 2 lineas--&gt;</span>
+		        <span class="c">&lt;!-- &lt;additionalOption&gt;-umlImageDirectory images&lt;/additionalOption&gt; --&gt;</span>
+		        <span class="c">&lt;!-- &lt;additionalOption&gt;-umlImageFormat png      &lt;/additionalOption&gt; --&gt;</span>
+            <span class="nt">&lt;additionalOption&gt;</span>-private<span class="nt">&lt;/additionalOption&gt;</span>
+	        <span class="nt">&lt;/additionalOptions&gt;</span>
+	      <span class="nt">&lt;/configuration&gt;</span></strong>
+		  <span class="nt">&lt;/plugin&gt;</span>
+	  <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+  <strong><span class="nt">&lt;dependencies&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="c">&lt;!-- https://mvnrepository.com/artifact/nl.talsmasoftware/umldoclet --&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>nl.talsmasoftware<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>umldoclet<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>2.0.16<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span></strong>
+<span class="nt">&lt;/project&gt;</span></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Bloque de configuración del plugin javadoc para que genere los diagrama UML</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Bloque de dependencias necesarias para la generación de los diagrama UML</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Guarda los cambios y vuelve a ejecutar maven. Ahora los JavaDoc se crean en la carpeta <code>docs/apidocs</code> que deberás subir también al repositorio. Verás que en tus JavaDoc se incluyen los diagramas de clases.</p>
+<p>Guarda los cambios y vuelve a ejecutar maven. Ahora los JavaDoc se crean en la carpeta <code>docs/apidocs</code> que deberás proteger en el repositorio. Verás que tus JavaDoc incluyen los diagramas de clases.</p>
 </div>
 <div id="fig15" class="imageblock text-center">
 <div class="content">
@@ -1003,6 +1025,9 @@ pre.rouge {
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1019,7 +1044,7 @@ pre.rouge {
 <div class="title">Figura 8. Descarga del .zip desde el repositorio GitHub</div>
 </div>
 <div class="paragraph">
-<p>El <code>.zip</code> que descargar desde GitHub incluye la práctica a entregar junto con las prácticas an anteriores, ya que todas están en el mismo repositorio. <strong>No te preocupes</strong> por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente en cada entrega.</p>
+<p>El <code>.zip</code> que descargar desde GitHub incluye la práctica a entregar junto con las prácticas anteriores, ya que todas están en el mismo repositorio. <strong>No te preocupes</strong> por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente a cada entrega.</p>
 </div>
 </div>
 </div>
