@@ -661,11 +661,6 @@ pre.rouge {
 <ul class="sectlevel1">
 <li><a href="#_objetivos">Objetivos</a></li>
 <li><a href="#_introducción">Introducción</a></li>
-<li><a href="#_proyecto_eclipse_en_el_repo_github">Proyecto Eclipse en el repo GitHub</a>
-<ul class="sectlevel2">
-<li><a href="#_repaso_de_uso_de_gitgithub_en_eclipse">Repaso de uso de Git/GitHub en Eclipse</a></li>
-</ul>
-</li>
 <li><a href="#_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</a>
 <ul class="sectlevel2">
 <li><a href="#_mavenizar_el_proyecto">Mavenizar el proyecto</a></li>
@@ -674,7 +669,7 @@ pre.rouge {
 <li><a href="#_generación_de_diagramas_de_clases">Generación de diagramas de clases</a></li>
 </ul>
 </li>
-<li><a href="#_descarga_del_zip_y_subida_a_la_tarea_en_el_aula_virtual">Descarga del .zip y subida a la tarea en el Aula Virtual</a></li>
+<li><a href="#_descarga_del_zip_y_subida_en_aula_virtual">Descarga del .zip y subida en Aula Virtual</a></li>
 </ul>
 </div>
 </div>
@@ -715,7 +710,7 @@ pre.rouge {
 <h2 id="_introducción">Introducción</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este tutorial pretende explicar la estructura correcta de los proyectos parala entrega de las prácticas de EDA II. Cada práctica se trata de un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado en Ingeniería Informática. Las carpetas que debe tener nuestro proyecto son las siguientes:</p>
+<p>Este tutorial pretende explicar la estructura correcta de los proyectos para la entrega de las prácticas de EDA II. Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado. Las carpetas que debe tener nuestro proyecto son las siguientes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -736,10 +731,10 @@ pre.rouge {
 <p><code>datasets</code>: carpeta con los archivos de texto que contienen los datos con los que probamos la ejecución de nuestros algoritmos. Estos archivos de datos pueden ser tanto los proporcionados por los profesores, como los que, en su caso, debamos generar como parte de la práctica, como por ejemplo se pedía en la práctica 2.</p>
 </li>
 <li>
-<p><code>docs</code>: carpeta con la documentación  en la que guardaremos el documento <code>.pdf</code> de la memoria y el resto de documentación creada, como la documentación en JavaDoc que veremos más adelante.</p>
+<p><code>docs</code>: carpeta con la documentación  en la que guardaremos el documento <code>.pdf</code> de la memoria y el resto de documentación creada, como por ejemplo la documentación en JavaDoc que describiremos más adelante.</p>
 </li>
 <li>
-<p><code>results</code>: (<em>opcional</em>) en caso de que la ejecución de los algortimos genere un documento de texto con los resultados de la ejecución, dichos documentos de texto deben guardarse en esta carpeta.</p>
+<p><code>results</code>: (<em>opcional</em>) en caso de que la ejecución de los algortimos generen  archivos de texto con los resultados de la ejecución, dichos documentos de texto deben guardarse en esta carpeta.</p>
 </li>
 </ul>
 </div>
@@ -749,146 +744,17 @@ pre.rouge {
 </div>
 <div class="title">Figura 1. Estructura del proyecto Java en Eclipse</div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_proyecto_eclipse_en_el_repo_github">Proyecto Eclipse en el repo GitHub</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_repaso_de_uso_de_gitgithub_en_eclipse">Repaso de uso de Git/GitHub en Eclipse</h3>
 <div class="paragraph">
-<p>En primer lugar, y simplemente a modo de repaso, esta sección resume las operaciones más importantes para trabajar con repositorios GitHub en Eclipse.</p>
-</div>
-<div class="sect3">
-<h4 id="_creación_del_repositorio_git_local">Creación del repositorio Git local</h4>
-<div class="paragraph">
-<p>Para gestionar con Git un proyecto creado en Eclipse: sobre el proyecto, botón derecho, <em>Team / Share project / Git / Next</em></p>
-</div>
-<div class="paragraph">
-<p>Quitamos la marca "<em>Use or create repository in parent folder of project</em>"</p>
-</div>
-<div id="fig2" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/ShareProjectGit.png" alt="Eclipse create Git local repository (1)" width="340">
-</div>
-<div class="title">Figura 2. Creacion del repositorio Git local (1)</div>
-</div>
-<div class="paragraph">
-<p><em>Create&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<p>Seleccionar la carpeta donde queremos que se guarde el respositorio Git en nuestro PC, y usar la rama <code>main</code>:</p>
-</div>
-<div id="fig3" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/CreateGitRepository.png" alt="Eclipse create Git local repository (2)" width="340">
-</div>
-<div class="title">Figura 3. Creacion del repositorio Git local (2)</div>
-</div>
-<div class="paragraph">
-<p><em>Finish</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_commits_de_los_cambios">Commits de los cambios</h4>
-<div class="paragraph">
-<p>Habilitamos la vista de <em>Git Staging</em>: <em>Window / Show view</em></p>
-</div>
-<div id="fig4" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/gitStagingView.png" alt="Eclipse Git staging view" width="240">
-</div>
-<div class="title">Figura 4. Mostrar la vista <em>Git Staging</em></div>
-</div>
-<div class="paragraph">
-<p>Aparecen los archivos en la vista, aun en estado de no preparado (Unstaged):</p>
-</div>
-<div id="fig5" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/unstaged.png" alt="Eclipse Git staging view - Unstaged" width="640">
-</div>
-<div class="title">Figura 5. Mostrar la vista <em>Git Staging</em> - Unstaged</div>
-</div>
-<div class="paragraph">
-<p>Los pasamos a "preparados" (Staged) seleccionando los archivos, botón derecho, <em>Add to index</em>:</p>
-</div>
-<div id="fig6" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/staged.png" alt="Eclipse Git staging view - Staged" width="640">
-</div>
-<div class="title">Figura 6. Mostrar la vista <em>Git Staging</em> - Staged</div>
-</div>
-<div class="paragraph">
-<p>Escribimos un mensaje apropiado con los cambios que hemos hecho, y click en Commit.</p>
-</div>
-<div class="paragraph">
-<p>Los archivos ya están guardados en la rama <code>main</code> del repositorio git local.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_configuración_del_repositorio_remoto_de_github_y_push">Configuración del repositorio remoto de GitHub y <em>Push</em></h4>
-<div class="paragraph">
-<p>Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio privado.</p>
-</div>
-<div class="paragraph">
-<p>En Eclipse, sobre el proyecto, Team / Push Branch 'main'&#8230;&#8203;</p>
-</div>
-<div id="fig7" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/pushRemote.png" alt="Eclipse push to remote" width="340">
-</div>
-<div class="title">Figura 7. Push al remoto por primera vez</div>
-</div>
-<div class="paragraph">
-<p>A continuación, copiamos la URL HTTPS del repositorio privado GitHub</p>
-</div>
-<div id="fig8" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/httpsRepoUrl.png" alt="Copiar HTTPS URL" width="300">
-</div>
-<div class="title">Figura 8. Copiar la HTTPS URL</div>
-</div>
-<div class="paragraph">
-<p>Y pegamos la URL en la ventana de Eclipse de configuración del remoto:</p>
-</div>
-<div id="fig9" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/remoteRepoConf.png" alt="Eclipse push to remote" width="340">
-</div>
-<div class="title">Figura 9. Copiar en la configuración del Remoto en Eclipse</div>
-</div>
-<div class="paragraph">
-<p>Pedirá unas credenciales:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>User</em>: usuario de GitHub</p>
-</li>
-<li>
-<p><em>Password</em>: <strong>Token de acceso</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>El token se genera en GitHub, sobre tu usuario: <em>Settings, Developer Settings, Personal Access tokens, Generate New Token.</em></p>
-</div>
-<div class="paragraph">
-<p>Hay que marcar las opciones de <em>repo</em>, y tras ello copiar el token generado y guardarlo en un lugar seguro porque más adelante no se puede recuperar. Por ello en Eclipse se recomienda marcar la opción <em>Store in secure store</em>.</p>
-</div>
-<div class="paragraph">
-<p>Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio GitHub, como una carpeta dentro del repositorio.</p>
+<p>El proyecto Eclipse de cada práctica se debe guardar como una carpeta con el nombre apropiado dentro del repositorio GitHub. Así, cada práctica se guardará en una carpeta distinta del mismo respositorio, y cada una de ellas contendrá un proyecto Java con la estructura comentada previamente.</p>
 </div>
 <div id="fig10" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/pushedToGitHub.png" alt="Proyecto subido al repo correctamente" width="340">
+<img src="modules/ROOT/images/pushedToGitHub.png" alt="Proyecto subido al repo correctamente" width="440">
 </div>
-<div class="title">Figura 10. Proyecto subido al repo correctamente</div>
+<div class="title">Figura 2. Proyecto subido al repo correctamente</div>
 </div>
 <div class="paragraph">
-<p>A partir de ahora, ya podremos utilizar el botón "Commit &amp; Push" en la en la vista <em>Git Staging</em> en Eclipse.</p>
-</div>
-</div>
+<p>Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial <a href="eclipseGiBasic.html">Uso básico de Git y GitHub en Eclipse</a>.</p>
 </div>
 </div>
 </div>
@@ -916,7 +782,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/mavenizedProjectPom.png" alt="Proyecto mavenizado" width="340">
 </div>
-<div class="title">Figura 11. Proyecto mavenizado con <code>pom.xml</code></div>
+<div class="title">Figura 3. Proyecto mavenizado con <code>pom.xml</code></div>
 </div>
 </div>
 <div class="sect2">
@@ -972,7 +838,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/eclipseEncodingUTF-8.png" alt="Configuración de la codificación UTF-8 en Eclipse" width="540">
 </div>
-<div class="title">Figura 12. Configuración de la codificación UTF-8 en Eclipse</div>
+<div class="title">Figura 4. Configuración de la codificación UTF-8 en Eclipse</div>
 </div>
 </td>
 </tr>
@@ -1026,7 +892,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/runAsMavenCleanJavadoc.png" alt="Run As" width="540">
 </div>
-<div class="title">Figura 13. Ejecución de javadoc con Maven</div>
+<div class="title">Figura 5. Ejecución de javadoc con Maven</div>
 </div>
 <div class="paragraph">
 <p>El resultado se genera de forma predeterminada en la carpeta <code>target/site/apidocs</code>. Para ver la documentación, abre el archivo <code>index.html</code>.</p>
@@ -1055,7 +921,21 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/featureComplete_comic.png" alt="Feature complete&#8230;&#8203;" width="540">
 </div>
-<div class="title">Figura 14. Algoritmo completado&#8230;&#8203;</div>
+<div class="title">Figura 6. Algoritmo completado&#8230;&#8203;</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Estos pasos solamente los podrás hacer en tu propio PC o portátil, ya que los PCs del Aula no tienen instalada la herramienta Graphviz.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Primero, descarga e instala desde: <a href="http://www.graphviz.org/download/" class="bare">http://www.graphviz.org/download/</a></p>
@@ -1107,7 +987,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/apidocsClassDiagrams.png" alt="Ejemplo de diagramas de clases" width="640">
 </div>
-<div class="title">Figura 15. Ejemplo de diagramas de clases generados</div>
+<div class="title">Figura 7. Ejemplo de diagramas de clases generados</div>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1127,7 +1007,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_descarga_del_zip_y_subida_a_la_tarea_en_el_aula_virtual">Descarga del .zip y subida a la tarea en el Aula Virtual</h2>
+<h2 id="_descarga_del_zip_y_subida_en_aula_virtual">Descarga del .zip y subida en Aula Virtual</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Recuerda que para la entrega de cada práctica, debes descargar el <code>.zip</code> del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual.</p>
@@ -1136,7 +1016,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/github_download_zip.png" alt="github download zip" width="340">
 </div>
-<div class="title">Figura 16. Descarga del .zip desde el repositorio GitHub</div>
+<div class="title">Figura 8. Descarga del .zip desde el repositorio GitHub</div>
 </div>
 <div class="paragraph">
 <p>El <code>.zip</code> que descargar desde GitHub incluye la práctica a entregar junto con las prácticas an anteriores, ya que todas están en el mismo repositorio. <strong>No te preocupes</strong> por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente en cada entrega.</p>

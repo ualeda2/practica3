@@ -27,7 +27,7 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 
 == Introducción
  
-Este tutorial pretende explicar la estructura correcta de los proyectos parala entrega de las prácticas de EDA II. Cada práctica se trata de un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado en Ingeniería Informática. Las carpetas que debe tener nuestro proyecto son las siguientes:
+Este tutorial pretende explicar la estructura correcta de los proyectos para la entrega de las prácticas de EDA II. Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado. Las carpetas que debe tener nuestro proyecto son las siguientes:
 
 * `src`:  Carpeta de fuentes (source folder en Eclipse) que contendrá las clases Java en las que implementamos y resolvermos los algoritmos. Dentro de la carpeta `src` crearemos un paquete con un nombre, como por ejemplo, `org.eda2.practicaX`,  sustituyendo `X` por el número de práctica.
 
@@ -37,13 +37,21 @@ Hasta ahora se ha descrito la estructura habitual de los proyectos Java en Eclip
 
 * `datasets`: carpeta con los archivos de texto que contienen los datos con los que probamos la ejecución de nuestros algoritmos. Estos archivos de datos pueden ser tanto los proporcionados por los profesores, como los que, en su caso, debamos generar como parte de la práctica, como por ejemplo se pedía en la práctica 2.
 
-* `docs`: carpeta con la documentación  en la que guardaremos el documento `.pdf` de la memoria y el resto de documentación creada, como la documentación en JavaDoc que veremos más adelante. 
+* `docs`: carpeta con la documentación  en la que guardaremos el documento `.pdf` de la memoria y el resto de documentación creada, como por ejemplo la documentación en JavaDoc que describiremos más adelante. 
 
-* `results`: (_opcional_) en caso de que la ejecución de los algortimos genere un documento de texto con los resultados de la ejecución, dichos documentos de texto deben guardarse en esta carpeta.
+* `results`: (_opcional_) en caso de que la ejecución de los algortimos generen  archivos de texto con los resultados de la ejecución, dichos documentos de texto deben guardarse en esta carpeta.
 
 [#fig1]
 .Estructura del proyecto Java en Eclipse
 image::EclipseJavaProject.png[Eclipse Java Project,width=340,pdfwidth=40%,align="center"]
+
+El proyecto Eclipse de cada práctica se debe guardar como una carpeta con el nombre apropiado dentro del repositorio GitHub. Así, cada práctica se guardará en una carpeta distinta del mismo respositorio, y cada una de ellas contendrá un proyecto Java con la estructura comentada previamente.
+
+[#fig10]
+.Proyecto subido al repo correctamente
+image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=440,pdfwidth=40%,align="center"]
+
+Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tutorial link:eclipseGiBasic.html[Uso básico de Git y GitHub en Eclipse].
 
 == Generación de JavaDoc con Maven
 
@@ -209,7 +217,7 @@ Recuerda que si en el proyecto aparecen errores (archivos en rojo) tras la modif
 ====
 
 
-== Descarga del .zip y subida a la tarea en el Aula Virtual
+== Descarga del .zip y subida en Aula Virtual
 
 Recuerda que para la entrega de cada práctica, debes descargar el `.zip` del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual. 
 

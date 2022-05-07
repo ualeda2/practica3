@@ -35,7 +35,7 @@ Quitamos la marca "_Use or create repository in parent folder of project_"
 
 [#fig2]
 .Creacion del repositorio Git local (1)
-image::ShareProjectGit.png[Eclipse create Git local repository (1),width=340,pdfwidth=40%,align="center"]
+image::ShareProjectGit.png[Eclipse create Git local repository (1),width=440,pdfwidth=50%,align="center"]
 
 _Create..._
 
@@ -47,7 +47,7 @@ image::CreateGitRepository.png[Eclipse create Git local repository (2),width=340
 
 _Finish_
 
-== Commits de los cambios
+== Proteger los cambios con `commit`
 
 Habilitamos la vista de _Git Staging_: _Window / Show view_
 
@@ -55,26 +55,26 @@ Habilitamos la vista de _Git Staging_: _Window / Show view_
 .Mostrar la vista _Git Staging_ 
 image::gitStagingView.png[Eclipse Git staging view,width=240,pdfwidth=30%,align="center"]
 
-Aparecen los archivos en la vista, aun en estado de no preparado (Unstaged):
+Aparecen los archivos del proyecto, aun en estado de no preparado (Unstaged):
 
 [#fig5]
 .Mostrar la vista _Git Staging_ - Unstaged
-image::unstaged.png[Eclipse Git staging view - Unstaged,width=640,pdfwidth=90%,align="center"]
+image::unstaged.png[Eclipse Git staging view - Unstaged,width=840,pdfwidth=90%,align="center"]
 
 Los pasamos a "preparados" (Staged) seleccionando los archivos, botón derecho, _Add to index_:
 
 [#fig6]
 .Mostrar la vista _Git Staging_ - Staged
-image::staged.png[Eclipse Git staging view - Staged,width=640,pdfwidth=90%,align="center"]
+image::staged.png[Eclipse Git staging view - Staged,width=840,pdfwidth=90%,align="center"]
 
 Escribimos un mensaje apropiado con los cambios que hemos hecho, y click en Commit.
 
 Los archivos ya están guardados en la rama `main` en el repositorio git *local*.
 
 
-== Configuración del repositorio remoto de GitHub y _Push_
+== Configuración del repositorio remoto de GitHub y subida con _Push_
 
-Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio privado. 
+Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio (_privado_). 
 
 En Eclipse, sobre el proyecto, Team / Push Branch 'main'...
 
@@ -82,7 +82,7 @@ En Eclipse, sobre el proyecto, Team / Push Branch 'main'...
 .Push al remoto por primera vez
 image::pushRemote.png[Eclipse push to remote,width=340,pdfwidth=30%,align="center"]
 
-A continuación, copiamos la URL HTTPS del repositorio privado GitHub
+A continuación, copiamos la URL HTTPS del repositorio privado GitHub.
 
 [#fig8]
 .Copiar la HTTPS URL
@@ -92,7 +92,7 @@ Y pegamos la URL en la ventana de Eclipse de configuración del remoto:
 
 [#fig9]
 .Copiar en la configuración del Remoto en Eclipse
-image::remoteRepoConf.png[Eclipse push to remote,width=340,pdfwidth=30%,align="center"]
+image::remoteRepoConf.png[Eclipse push to remote,width=440,pdfwidth=40%,align="center"]
 
 Pedirá unas credenciales: 
 
@@ -101,13 +101,13 @@ Pedirá unas credenciales:
 
 El token se genera en GitHub, sobre tu usuario: _Settings, Developer Settings, Personal Access tokens, Generate New Token._
 
-Hay que marcar las opciones de _repo_, y tras ello copiar el token generado y guardarlo en un lugar seguro porque más adelante no se puede recuperar. Por ello en Eclipse se recomienda marcar la opción _Store in secure store_.
+Hay que marcar las opciones de _repo_, y tras ello copiar el token generado y guardarlo en un lugar seguro porque más adelante no se puede recuperar. Por ello en Eclipse se recomienda marcar la opción _Store in secure store_ *solamente si estamos trabajando en nuestro propio portátil* (_nunca si lo estamos haciendo en un PC del Aula_).
 
-Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio GitHub, como una carpeta dentro del repositorio.
+Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio GitHub, como una carpeta dentro del repositorio. Así, cada práctica se guardará en una carpeta distinta del mismo respositorio.
 
 [#fig10]
 .Proyecto subido al repo correctamente
-image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=340,pdfwidth=30%,align="center"]
-
+image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=440,pdfwidth=40%,align="center"]
 
 A partir de ahora, ya podremos utilizar el botón "Commit & Push" en la en la vista _Git Staging_ en Eclipse.
+

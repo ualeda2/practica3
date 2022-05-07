@@ -447,8 +447,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_objetivos">Objetivos</a></li>
 <li><a href="#_introducción">Introducción</a></li>
 <li><a href="#_creación_del_repositorio_git_local">Creación del repositorio Git local</a></li>
-<li><a href="#_commits_de_los_cambios">Commits de los cambios</a></li>
-<li><a href="#_configuración_del_repositorio_remoto_de_github_y_push">Configuración del repositorio remoto de GitHub y <em>Push</em></a></li>
+<li><a href="#_proteger_los_cambios_con_commit">Proteger los cambios con <code>commit</code></a></li>
+<li><a href="#_configuración_del_repositorio_remoto_de_github_y_subida_con_push">Configuración del repositorio remoto de GitHub y subida con <em>Push</em></a></li>
 </ul>
 </div>
 </div>
@@ -498,7 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="fig2" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/ShareProjectGit.png" alt="Eclipse create Git local repository (1)" width="340">
+<img src="modules/ROOT/images/ShareProjectGit.png" alt="Eclipse create Git local repository (1)" width="440">
 </div>
 <div class="title">Figura 1. Creacion del repositorio Git local (1)</div>
 </div>
@@ -520,7 +520,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_commits_de_los_cambios">Commits de los cambios</h2>
+<h2 id="_proteger_los_cambios_con_commit">Proteger los cambios con <code>commit</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Habilitamos la vista de <em>Git Staging</em>: <em>Window / Show view</em></p>
@@ -532,11 +532,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figura 3. Mostrar la vista <em>Git Staging</em></div>
 </div>
 <div class="paragraph">
-<p>Aparecen los archivos en la vista, aun en estado de no preparado (Unstaged):</p>
+<p>Aparecen los archivos del proyecto, aun en estado de no preparado (Unstaged):</p>
 </div>
 <div id="fig5" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/unstaged.png" alt="Eclipse Git staging view - Unstaged" width="640">
+<img src="modules/ROOT/images/unstaged.png" alt="Eclipse Git staging view - Unstaged" width="840">
 </div>
 <div class="title">Figura 4. Mostrar la vista <em>Git Staging</em> - Unstaged</div>
 </div>
@@ -545,7 +545,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="fig6" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/staged.png" alt="Eclipse Git staging view - Staged" width="640">
+<img src="modules/ROOT/images/staged.png" alt="Eclipse Git staging view - Staged" width="840">
 </div>
 <div class="title">Figura 5. Mostrar la vista <em>Git Staging</em> - Staged</div>
 </div>
@@ -553,15 +553,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Escribimos un mensaje apropiado con los cambios que hemos hecho, y click en Commit.</p>
 </div>
 <div class="paragraph">
-<p>Los archivos ya están guardados en la rama <code>main</code> del repositorio git local.</p>
+<p>Los archivos ya están guardados en la rama <code>main</code> en el repositorio git <strong>local</strong>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuración_del_repositorio_remoto_de_github_y_push">Configuración del repositorio remoto de GitHub y <em>Push</em></h2>
+<h2 id="_configuración_del_repositorio_remoto_de_github_y_subida_con_push">Configuración del repositorio remoto de GitHub y subida con <em>Push</em></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio privado.</p>
+<p>Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio (<em>privado</em>).</p>
 </div>
 <div class="paragraph">
 <p>En Eclipse, sobre el proyecto, Team / Push Branch 'main'&#8230;&#8203;</p>
@@ -573,7 +573,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figura 6. Push al remoto por primera vez</div>
 </div>
 <div class="paragraph">
-<p>A continuación, copiamos la URL HTTPS del repositorio privado GitHub</p>
+<p>A continuación, copiamos la URL HTTPS del repositorio privado GitHub.</p>
 </div>
 <div id="fig8" class="imageblock text-center">
 <div class="content">
@@ -586,7 +586,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="fig9" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/remoteRepoConf.png" alt="Eclipse push to remote" width="340">
+<img src="modules/ROOT/images/remoteRepoConf.png" alt="Eclipse push to remote" width="440">
 </div>
 <div class="title">Figura 8. Copiar en la configuración del Remoto en Eclipse</div>
 </div>
@@ -607,14 +607,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>El token se genera en GitHub, sobre tu usuario: <em>Settings, Developer Settings, Personal Access tokens, Generate New Token.</em></p>
 </div>
 <div class="paragraph">
-<p>Hay que marcar las opciones de <em>repo</em>, y tras ello copiar el token generado y guardarlo en un lugar seguro porque más adelante no se puede recuperar. Por ello en Eclipse se recomienda marcar la opción <em>Store in secure store</em>.</p>
+<p>Hay que marcar las opciones de <em>repo</em>, y tras ello copiar el token generado y guardarlo en un lugar seguro porque más adelante no se puede recuperar. Por ello en Eclipse se recomienda marcar la opción <em>Store in secure store</em> <strong>solamente si estamos trabajando en nuestro propio portátil</strong> (<em>nunca si lo estamos haciendo en un PC del Aula</em>).</p>
 </div>
 <div class="paragraph">
-<p>Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio GitHub, como una carpeta dentro del repositorio.</p>
+<p>Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio GitHub, como una carpeta dentro del repositorio. Así, cada práctica se guardará en una carpeta distinta del mismo respositorio.</p>
 </div>
 <div id="fig10" class="imageblock text-center">
 <div class="content">
-<img src="modules/ROOT/images/pushedToGitHub.png" alt="Proyecto subido al repo correctamente" width="340">
+<img src="modules/ROOT/images/pushedToGitHub.png" alt="Proyecto subido al repo correctamente" width="440">
 </div>
 <div class="title">Figura 9. Proyecto subido al repo correctamente</div>
 </div>
