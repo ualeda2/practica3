@@ -61,9 +61,15 @@ Si necesitas repasar el uso de Git y GitHub desde Eclipse, echa un vistazo al tu
 
 == Generación de JavaDoc con Maven
 
+Documentar tu proyecto es una parte importante del buen desarrollo de software. 
+
+[#fig14]
+.Trabajo completado... ¿Seguro?
+image::featureComplete_comic.jpeg[Feature complete...,width=540,pdfwidth=60%,align="center"]
+
 https://es.wikipedia.org/wiki/Maven[Maven] es una herramienta que permite simplificar y automatizar el proceso de construcción (`build`) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc.. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto. 
 
-En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.
+En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc a partir del código fuente de las clases Java del proyecto.
  
 A continuación se describen los pasos necesarios. 
 
@@ -172,11 +178,7 @@ La carpeta `target` *nunca* se guarda en el respositorio Git, ni se sube a GitHu
 
 === Generación de diagramas de clases
 
-Documentar tu proyecto es una parte importante del buen desarrollo de software. Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente diagramas UML a partir del código.
-
-[#fig14]
-.Trabajo completado... ¿Seguro?
-image::featureComplete_comic.jpeg[Feature complete...,width=540,pdfwidth=60%,align="center"]
+Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente *diagramas de clases UML* a partir del código.
 
 [WARNING]
 ====
@@ -241,7 +243,7 @@ Recuerda que si en el proyecto aparecen errores (archivos en rojo) tras la modif
 
 Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas comentadas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente. 
 
-== Descarga del .zip y subida en Aula Virtual
+== Descarga del .zip y entrega en Aula Virtual
 
 Recuerda que para la entrega de cada práctica, debes descargar el `.zip` del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual. 
 

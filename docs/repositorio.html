@@ -670,7 +670,7 @@ pre.rouge {
 <li><a href="#_generación_de_diagramas_de_clases">Generación de diagramas de clases</a></li>
 </ul>
 </li>
-<li><a href="#_descarga_del_zip_y_subida_en_aula_virtual">Descarga del .zip y subida en Aula Virtual</a></li>
+<li><a href="#_descarga_del_zip_y_entrega_en_aula_virtual">Descarga del .zip y entrega en Aula Virtual</a></li>
 <li><a href="#_troubleshooting_solución_de_problemas">Troubleshooting: Solución de problemas</a>
 <ul class="sectlevel2">
 <li><a href="#_running_on_a_jre_rather_than_a_jdk">Running on a JRE rather than a JDK</a></li>
@@ -779,10 +779,19 @@ pre.rouge {
 <h2 id="_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>Documentar tu proyecto es una parte importante del buen desarrollo de software.</p>
+</div>
+<div id="fig14" class="imageblock text-center">
+<div class="content">
+<img src="modules/ROOT/images/featureComplete_comic.jpeg" alt="Feature complete&#8230;&#8203;" width="540">
+</div>
+<div class="title">Figura 3. Trabajo completado&#8230;&#8203; ¿Seguro?</div>
+</div>
+<div class="paragraph">
 <p><a href="https://es.wikipedia.org/wiki/Maven">Maven</a> es una herramienta que permite simplificar y automatizar el proceso de construcción (<code>build</code>) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc.. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto.</p>
 </div>
 <div class="paragraph">
-<p>En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc de las clases Java del proyecto.</p>
+<p>En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc a partir del código fuente de las clases Java del proyecto.</p>
 </div>
 <div class="paragraph">
 <p>A continuación se describen los pasos necesarios.</p>
@@ -799,7 +808,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/mavenizedProjectPom.png" alt="Proyecto mavenizado" width="340">
 </div>
-<div class="title">Figura 3. Proyecto mavenizado con <code>pom.xml</code></div>
+<div class="title">Figura 4. Proyecto mavenizado con <code>pom.xml</code></div>
 </div>
 </div>
 <div class="sect2">
@@ -851,7 +860,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/eclipseEncodingUTF-8.png" alt="Configuración de la codificación UTF-8 en Eclipse" width="540">
 </div>
-<div class="title">Figura 4. Configuración de la codificación UTF-8 en Eclipse</div>
+<div class="title">Figura 5. Configuración de la codificación UTF-8 en Eclipse</div>
 </div>
 </td>
 </tr>
@@ -905,7 +914,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/runAsMavenCleanJavadoc.png" alt="Run As" width="540">
 </div>
-<div class="title">Figura 5. Ejecución de javadoc con Maven</div>
+<div class="title">Figura 6. Ejecución de javadoc con Maven</div>
 </div>
 <div class="paragraph">
 <p>La ejecución habrá sido correcta cuando el texto mostrado en la consola finalize con el mensaje <code>BUILD SUCCESS</code>:</p>
@@ -928,7 +937,7 @@ pre.rouge {
 <div class="content">
 <img src="modules/ROOT/images/docs_apidocs.png" alt="Javadoc sample:javadoc" width="540">
 </div>
-<div class="title">Figura 6. JavaDoc, ejemplo de documentación generada</div>
+<div class="title">Figura 7. JavaDoc, ejemplo de documentación generada</div>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -948,13 +957,7 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_generación_de_diagramas_de_clases">Generación de diagramas de clases</h3>
 <div class="paragraph">
-<p>Documentar tu proyecto es una parte importante del buen desarrollo de software. Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente diagramas UML a partir del código.</p>
-</div>
-<div id="fig14" class="imageblock text-center">
-<div class="content">
-<img src="modules/ROOT/images/featureComplete_comic.jpeg" alt="Feature complete&#8230;&#8203;" width="540">
-</div>
-<div class="title">Figura 7. Trabajo completado&#8230;&#8203; ¿Seguro?</div>
+<p>Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente <strong>diagramas de clases UML</strong> a partir del código.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1057,7 +1060,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_descarga_del_zip_y_subida_en_aula_virtual">Descarga del .zip y subida en Aula Virtual</h2>
+<h2 id="_descarga_del_zip_y_entrega_en_aula_virtual">Descarga del .zip y entrega en Aula Virtual</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Recuerda que para la entrega de cada práctica, debes descargar el <code>.zip</code> del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual.</p>
