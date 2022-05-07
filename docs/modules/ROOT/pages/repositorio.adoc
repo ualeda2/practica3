@@ -145,7 +145,20 @@ Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derech
 .Ejecución de javadoc con Maven
 image::runAsMavenCleanJavadoc.png[Run As, Maven Build... clean javadoc:javadoc,width=540,pdfwidth=60%,align="center"]
 
-Los archivos JavaDoc que se obtienen tras la ejecución de Maven se guardan de forma predeterminada en la carpeta `target/site/apidocs`. Para ver la documentación, abre el archivo `index.html` de esa carpeta.
+La ejecución habrá sido correcta cuando el texto mostrado en la consola finalize con el mensaje `BUILD SUCCESS`: 
+
+[source,xml,subs="verbatim,quotes"]
+----
+...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.659 s
+[INFO] Finished at: 2022-05-07T23:37:48+02:00
+[INFO] --------------------
+----
+
+Los archivos JavaDoc generados tras la ejecución de Maven se guardan de forma predeterminada en la carpeta `target/site/apidocs`. Para ver su contenido, abre el archivo `index.html` de esa carpeta.
 
 [WARNING]
 ====
