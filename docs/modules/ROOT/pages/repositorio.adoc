@@ -66,7 +66,7 @@ Documentar tu proyecto es una parte importante del buen desarrollo de software.
 .Trabajo completado... ¿Seguro?
 image::featureComplete_comic.jpeg[Feature complete...,width=540,pdfwidth=60%,align="center"]
 
-https://es.wikipedia.org/wiki/Maven[Maven] es una herramienta que permite simplificar y automatizar el proceso de construcción (`build`) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación JavaDoc, etc.. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto. 
+https://es.wikipedia.org/wiki/Maven[Maven] es una herramienta que permite simplificar y automatizar el proceso de construcción (`build`) de proyectos Java. La construcción de un proyecto Java implica varios pasos como compilar, ejecutar los tests, empaquetar el proyecto, generar documentación https://es.wikipedia.org/wiki/Javadoc[JavaDoc], etc. Además, Maven permite automatizar la gestión de dependencias, de manera que una vez configurada una dependencia en Maven no será necesaria importarla manualmente en el proyecto. 
 
 En esta asignatura vamos a usar Maven para generar la documentación en formato JavaDoc a partir del código fuente de las clases Java del proyecto.
  
