@@ -68,7 +68,7 @@ Para ello deberá realizar los siguientes apartados:
 
 == Entregas
 
-Se ha de entregar, en fecha, un repositorio privado de GitHub con acceso para el profesor que evalúa las prácticas (mismo repositorio para todas las prácticas de EDA II), con toda la documentación y el código fuente requerido en la práctica:
+Se ha de entregar, en fecha, un repositorio https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#[privado] de GitHub con acceso para el profesor que evalúa las prácticas (mismo repositorio para todas las prácticas de EDA II), con toda la documentación y el código fuente requerido en la práctica:
 
 * En dicho repositorio crear una nueva carpeta llamada `practica_3`, donde creéis dos subcarpetas una para la documentación, `docs` y otra para el código fuente `sources`.
 
