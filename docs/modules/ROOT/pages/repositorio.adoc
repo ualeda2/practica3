@@ -25,11 +25,10 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 * Aprender a generar automaticamente la *documentación en Javadoc*, incluyendo *diagramas de clases*, mediante *Maven*.
 ====
 
-== Introducción
- 
-Este tutorial pretende explicar la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II. 
 
 == Estructura del Proyecto Java en Eclipse
+
+Esta sección pretende describir la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II. 
 
 Cada práctica se resuelve en un proyecto Java en Eclipse, al que debemos a añadir una documentación adicional, y que debe tener la estructura estándar de cualquier proyecto Java en Eclipse que conocemos desde 1º del Grado.
 
