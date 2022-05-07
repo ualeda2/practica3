@@ -79,7 +79,7 @@ image::mavenizedProjectPom.png[Proyecto mavenizado, archivo `pom.xml`,width=340,
 
 === Configuración básica del `pom.xml`
 
-Lo primero es configurar el `pom.xml` del proyecto para que utilice codificación `UTF-8`. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo `pom.xml` y añadimos las siguientes líneas.
+Lo primero es configurar el `pom.xml` para que utilice codificación `UTF-8`. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo `pom.xml` y añadimos las siguientes líneas.
 
 [source,xml,subs="verbatim,quotes"]
 ----
@@ -115,9 +115,9 @@ image::eclipseEncodingUTF-8.png[Configuración de la codificación UTF-8 en Ecli
 Si en el proyecto aparecen errores (archivos en rojo) tras la modificación del `pom.xml`, se debe actualizar el proyecto Maven: sobre el proyecto, botón derecho, _Maven_ > _Update Project_.
 ====
 
-=== Generación del JavaDoc
+=== Generación de JavaDoc
 
-Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin javadoc al `pom.xml`, y a continuación llamaremos al objetivo (`goal`) de maven `javadoc:javadoc`. Esto generará la documentación de las clases Java en formato `html` en la carpeta predeterminada `target/site/apidocs` del proyecto.
+Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin JavaDoc al `pom.xml`, y a continuación llamaremos al objetivo (`goal`) de maven `javadoc:javadoc`. Esto generará la documentación de las clases Java en formato `html` en la carpeta predeterminada `target/site/apidocs` del proyecto.
 
 Para ello, editamos el archivo `pom.xml` y en el bloque de plugins añadimos el plugin de JavaDoc:
 
@@ -139,7 +139,7 @@ Para ello, editamos el archivo `pom.xml` y en el bloque de plugins añadimos el 
 </project>
 ----
 
-Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, _Run as..._ , _Maven build_. En el campo Goals escribimos: *clean javadoc:javadoc*
+Ahora ejecutamos Maven para generar el JavaDoc: Sobre el proyecto, Botón derecho, _Run as..._ , _Maven build_. En el campo Goals escribimos: *`clean javadoc:javadoc`*
 
 [#fig13]
 .Ejecución de javadoc con Maven
@@ -154,11 +154,16 @@ La ejecución habrá sido correcta cuando el texto mostrado en la consola finali
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  6.659 s
-[INFO] Finished at: 2022-05-07T23:37:48+02:00
+[INFO] Finished at: 2022-xx-xxxxxxxx
 [INFO] --------------------
 ----
 
 Los archivos JavaDoc generados tras la ejecución de Maven se guardan de forma predeterminada en la carpeta `target/site/apidocs`. Para ver su contenido, abre el archivo `index.html` de esa carpeta.
+
+[#fig13]
+.JavaDoc, ejemplo de documentación generada
+image::docs_apidocs.png[Javadoc sample:javadoc,width=540,pdfwidth=60%,align="center"]
+
 
 [WARNING]
 ====
@@ -196,18 +201,18 @@ A continuación, actualiza la configuración del plugin JavaDoc en el archivo `p
           <doclet>nl.talsmasoftware.umldoclet.UMLDoclet</doclet>
           <docletArtifact>
             <groupId>nl.talsmasoftware</groupId>
-	          <artifactId>umldoclet</artifactId>
-    		    <version>2.0.16</version>
-	        </docletArtifact>
-	        <additionalOptions>
-    	      <!-- Para generar los .png para la memoria, descomentar estas 2 lineas-->
-		        <!-- <additionalOption>-umlImageDirectory images</additionalOption> -->
-		        <!-- <additionalOption>-umlImageFormat png      </additionalOption> -->
+            <artifactId>umldoclet</artifactId>
+            <version>2.0.16</version>
+          </docletArtifact>
+          <additionalOptions>
+            <!-- Para generar los .png para la memoria, descomentar estas 2 lineas-->
+            <!-- <additionalOption>-umlImageDirectory images</additionalOption> -->
+            <!-- <additionalOption>-umlImageFormat png      </additionalOption> -->
             <additionalOption>-private</additionalOption>
-	        </additionalOptions>
-	      </configuration>*
-		  </plugin>
-	  </plugins>
+          </additionalOptions>
+        </configuration>*
+      </plugin>
+    </plugins>
   </build>
   *<dependencies> <2>
     <!-- https://mvnrepository.com/artifact/nl.talsmasoftware/umldoclet -->
@@ -234,7 +239,7 @@ image::apidocsClassDiagrams.png[Ejemplo de diagramas de clases,width=640,pdfwidt
 Recuerda que si en el proyecto aparecen errores (archivos en rojo) tras la modificación del `pom.xml`, se debe actualizar el proyecto Maven: sobre el proyecto, botón derecho, _Maven_ > _Update Project_.
 ====
 
-Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente. 
+Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas comentadas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente. 
 
 == Descarga del .zip y subida en Aula Virtual
 
@@ -242,7 +247,18 @@ Recuerda que para la entrega de cada práctica, debes descargar el `.zip` del re
 
 [#fig16]
 .Descarga del .zip desde el repositorio GitHub
-image::github_download_zip.png[,width=340,pdfwidth=40%,align="center"]
+image::github_download_zip.png[,width=440,pdfwidth=50%,align="center"]
 
-El `.zip` que descargar desde GitHub incluye la práctica a entregar junto con las prácticas anteriores, ya que todas están en el mismo repositorio. *No te preocupes* por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente a cada entrega.
+El `.zip` que se descarga desde GitHub incluye la práctica a entregar junto con el resto de prácticas anteriores, ya que todas están en el mismo repositorio. *No te preocupes* por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente a cada entrega.
 
+== Troubleshooting: Solución de problemas
+
+=== Running on a JRE rather than a JDK
+
+Si en la ejecución de Maven, en la consola de aparece el siguiente error: 
+
+ No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+
+En Eclipse: _Window_ > _Preferences_ > _Java_ > _Installed JREs_
+Comprueba que está marcada una instalación de JDK en lugar de un JRE. 
+Si no tuvieses instalado un JDK, debes instalarlo. Recomendable _OpenJDK-11_ o superior. Tras instalarlo, debes reiniciar Eclipse y añadirlo a la lista de Installed JREs.

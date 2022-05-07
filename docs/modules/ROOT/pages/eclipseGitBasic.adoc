@@ -35,7 +35,7 @@ Quitamos la marca "_Use or create repository in parent folder of project_"
 
 [#fig2]
 .Creacion del repositorio Git local (1)
-image::ShareProjectGit.png[Eclipse create Git local repository (1),width=440,pdfwidth=50%,align="center"]
+image::ShareProjectGit.png[Eclipse create Git local repository (1),width=540,pdfwidth=60%,align="center"]
 
 _Create..._
 
@@ -43,7 +43,7 @@ Seleccionar la carpeta donde queremos que se guarde el respositorio Git en nuest
 
 [#fig3]
 .Creacion del repositorio Git local (2)
-image::CreateGitRepository.png[Eclipse create Git local repository (2),width=340,pdfwidth=40%,align="center"]
+image::CreateGitRepository.png[Eclipse create Git local repository (2),width=440,pdfwidth=50%,align="center"]
 
 _Finish_
 
@@ -80,19 +80,19 @@ En Eclipse, sobre el proyecto, Team / Push Branch 'main'...
 
 [#fig7]
 .Push al remoto por primera vez
-image::pushRemote.png[Eclipse push to remote,width=340,pdfwidth=30%,align="center"]
+image::pushRemote.png[Eclipse push to remote,width=440,pdfwidth=40%,align="center"]
 
 A continuación, copiamos la URL HTTPS del repositorio privado GitHub.
 
 [#fig8]
 .Copiar la HTTPS URL
-image::httpsRepoUrl.png[Copiar HTTPS URL,width=300,pdfwidth=30%,align="center"]
+image::httpsRepoUrl.png[Copiar HTTPS URL,width=400,pdfwidth=40%,align="center"]
 
 Y pegamos la URL en la ventana de Eclipse de configuración del remoto:
 
 [#fig9]
 .Copiar en la configuración del Remoto en Eclipse
-image::remoteRepoConf.png[Eclipse push to remote,width=440,pdfwidth=40%,align="center"]
+image::remoteRepoConf.png[Eclipse push to remote,width=540,pdfwidth=50%,align="center"]
 
 Pedirá unas credenciales: 
 
@@ -107,7 +107,7 @@ Por último, comprobamos que el proyecto Eclipse se ha subido al repositorio Git
 
 [#fig10]
 .Proyecto subido al repo correctamente
-image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=440,pdfwidth=40%,align="center"]
+image::pushedToGitHub.png[Proyecto subido al repo correctamente,width=540,pdfwidth=50%,align="center"]
 
 A partir de ahora, ya podremos utilizar el botón "Commit & Push" en la en la vista _Git Staging_ en Eclipse.
 
