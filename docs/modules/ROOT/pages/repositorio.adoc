@@ -3,6 +3,7 @@ Nombre y título del trabajo
 ////
 = EDA II – Prácticas en repositorio GitHub y generación de JavaDoc
 :navtitle: Introducción
+:sectnums:
 
 // Bloque para GitHub, para que al visualizar el .adoc encuentre las figuras.
 ifdef::env-github[]
@@ -26,7 +27,7 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 ====
 
 
-== Estructura del Proyecto Java en Eclipse
+== Estructura del Proyecto Java
 
 Esta sección pretende describir la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II. 
 
@@ -82,7 +83,7 @@ Dejamos los valores predeterminados, y clic en _Finish_. Verás que se ha creado
 .Proyecto mavenizado con `pom.xml`
 image::mavenizedProjectPom.png[Proyecto mavenizado, archivo `pom.xml`,width=340,pdfwidth=30%,align="center"]
 
-=== Configuración básica del `pom.xml`
+=== Configuración básica `pom.xml`
 
 Lo primero es configurar el `pom.xml` para que utilice codificación `UTF-8`. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo `pom.xml` y añadimos las siguientes líneas.
 
@@ -120,7 +121,7 @@ image::eclipseEncodingUTF-8.png[Configuración de la codificación UTF-8 en Ecli
 Si en el proyecto aparecen errores (archivos en rojo) tras la modificación del `pom.xml`, se debe actualizar el proyecto Maven: sobre el proyecto, botón derecho, _Maven_ > _Update Project_.
 ====
 
-=== Generación de JavaDoc
+=== Ejecución de Maven
 
 Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin JavaDoc al `pom.xml`, y a continuación llamaremos al objetivo (`goal`) de maven `javadoc:javadoc`. Esto generará la documentación de las clases Java en formato `html` en la carpeta predeterminada `target/site/apidocs` del proyecto.
 
@@ -175,7 +176,7 @@ image::docs_apidocs.png[Javadoc sample:javadoc,width=540,pdfwidth=60%,align="cen
 La carpeta `target` *nunca* se guarda en el respositorio Git, ni se sube a GitHub. Git ignora está carpeta porque se encuentra dentro del archivo `.gitignore`.
 ====
 
-=== Generación de diagramas de clases
+=== Diagramas de clases
 
 Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente *diagramas de clases UML* a partir del código.
 
@@ -242,7 +243,7 @@ Recuerda que si en el proyecto aparecen errores (archivos en rojo) tras la modif
 
 Es recomendable que los diagramas de clases los incorpores en el documento .pdf de la memoria de la práctica. Para generar los diagramas como imágenes .png, descomenta las dos lineas comentadas de la configuración del plugin y vuelve a ejecutar maven. Una vez copies las imágenes .png, vuelve a comentar las dos líneas para que los javadoc se vean correctamente. 
 
-== Descarga del .zip y entrega en Aula Virtual
+== Descarga del .zip para la entrega
 
 Recuerda que para la entrega de cada práctica, debes descargar el `.zip` del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual. 
 
@@ -252,9 +253,11 @@ image::github_download_zip.png[,width=440,pdfwidth=50%,align="center"]
 
 El `.zip` que se descarga desde GitHub incluye la práctica a entregar junto con el resto de prácticas anteriores, ya que todas están en el mismo repositorio. *No te preocupes* por ello, ya que los profesores revisaremos y evaluaremos solamente la práctica correspondiente a cada entrega.
 
-== Troubleshooting: Solución de problemas
+== Troubleshooting
 
-=== Running on a JRE rather than a JDK
+En esa sección se documentará la solución a los problemas que vayan apareciendo.
+
+=== Running on JRE rather than JDK
 
 Si en la ejecución de Maven, en la consola de aparece el siguiente error: 
 

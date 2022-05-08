@@ -659,20 +659,20 @@ pre.rouge {
 <div id="toc" class="toc2">
 <div id="toctitle">Tabla de contenidos</div>
 <ul class="sectlevel1">
-<li><a href="#_objetivos">Objetivos</a></li>
-<li><a href="#_estructura_del_proyecto_java_en_eclipse">Estructura del Proyecto Java en Eclipse</a></li>
-<li><a href="#_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</a>
+<li><a href="#_objetivos">1. Objetivos</a></li>
+<li><a href="#_estructura_del_proyecto_java">2. Estructura del Proyecto Java</a></li>
+<li><a href="#_generación_de_javadoc_con_maven">3. Generación de JavaDoc con Maven</a>
 <ul class="sectlevel2">
-<li><a href="#_mavenizar_el_proyecto">Mavenizar el proyecto</a></li>
-<li><a href="#_configuración_básica_del_pom_xml">Configuración básica del <code>pom.xml</code></a></li>
-<li><a href="#_generación_de_javadoc">Generación de JavaDoc</a></li>
-<li><a href="#_generación_de_diagramas_de_clases">Generación de diagramas de clases</a></li>
+<li><a href="#_mavenizar_el_proyecto">3.1. Mavenizar el proyecto</a></li>
+<li><a href="#_configuración_básica_pom_xml">3.2. Configuración básica <code>pom.xml</code></a></li>
+<li><a href="#_ejecución_de_maven">3.3. Ejecución de Maven</a></li>
+<li><a href="#_diagramas_de_clases">3.4. Diagramas de clases</a></li>
 </ul>
 </li>
-<li><a href="#_descarga_del_zip_y_entrega_en_aula_virtual">Descarga del .zip y entrega en Aula Virtual</a></li>
-<li><a href="#_troubleshooting_solución_de_problemas">Troubleshooting: Solución de problemas</a>
+<li><a href="#_descarga_del_zip_para_la_entrega">4. Descarga del .zip para la entrega</a></li>
+<li><a href="#_troubleshooting">5. Troubleshooting</a>
 <ul class="sectlevel2">
-<li><a href="#_running_on_a_jre_rather_than_a_jdk">Running on a JRE rather than a JDK</a></li>
+<li><a href="#_running_on_jre_rather_than_jdk">5.1. Running on JRE rather than JDK</a></li>
 </ul>
 </li>
 </ul>
@@ -690,7 +690,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_objetivos">Objetivos</h2>
+<h2 id="_objetivos">1. Objetivos</h2>
 <div class="sectionbody">
 <div class="exampleblock">
 <div class="content">
@@ -712,7 +712,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_estructura_del_proyecto_java_en_eclipse">Estructura del Proyecto Java en Eclipse</h2>
+<h2 id="_estructura_del_proyecto_java">2. Estructura del Proyecto Java</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Esta sección pretende describir la estructura correcta de los proyectos Java creados en Eclipse para la correcta entrega de las prácticas de EDA II.</p>
@@ -770,7 +770,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_generación_de_javadoc_con_maven">Generación de JavaDoc con Maven</h2>
+<h2 id="_generación_de_javadoc_con_maven">3. Generación de JavaDoc con Maven</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Documentar tu proyecto es una parte importante del buen desarrollo de software.</p>
@@ -791,7 +791,7 @@ pre.rouge {
 <p>A continuación se describen los pasos necesarios.</p>
 </div>
 <div class="sect2">
-<h3 id="_mavenizar_el_proyecto">Mavenizar el proyecto</h3>
+<h3 id="_mavenizar_el_proyecto">3.1. Mavenizar el proyecto</h3>
 <div class="paragraph">
 <p>Sobre el proyecto Java en Eclipse, botón derecho, <em>Configure, Convert to maven project</em></p>
 </div>
@@ -806,7 +806,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuración_básica_del_pom_xml">Configuración básica del <code>pom.xml</code></h3>
+<h3 id="_configuración_básica_pom_xml">3.2. Configuración básica <code>pom.xml</code></h3>
 <div class="paragraph">
 <p>Lo primero es configurar el <code>pom.xml</code> para que utilice codificación <code>UTF-8</code>. Esto permite la portabilidad de los fuentes entre plataformas (Linux, Windows, Mac) sin problemas en la codificación de los carateres (tildes, caracteres especiales, etc). También vamos a indicar dónde están las carpetas con los fuentes y los tests. Para ello, editamos el archivo <code>pom.xml</code> y añadimos las siguientes líneas.</p>
 </div>
@@ -876,7 +876,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_generación_de_javadoc">Generación de JavaDoc</h3>
+<h3 id="_ejecución_de_maven">3.3. Ejecución de Maven</h3>
 <div class="paragraph">
 <p>Para generar la documentación de las clases con JavaDoc, primero vamos a añadir el plugin JavaDoc al <code>pom.xml</code>, y a continuación llamaremos al objetivo (<code>goal</code>) de maven <code>javadoc:javadoc</code>. Esto generará la documentación de las clases Java en formato <code>html</code> en la carpeta predeterminada <code>target/site/apidocs</code> del proyecto.</p>
 </div>
@@ -949,7 +949,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_generación_de_diagramas_de_clases">Generación de diagramas de clases</h3>
+<h3 id="_diagramas_de_clases">3.4. Diagramas de clases</h3>
 <div class="paragraph">
 <p>Al igual que la documentación JavaDoc, con Maven se pueden crear automáticamente <strong>diagramas de clases UML</strong> a partir del código.</p>
 </div>
@@ -1054,7 +1054,7 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_descarga_del_zip_y_entrega_en_aula_virtual">Descarga del .zip y entrega en Aula Virtual</h2>
+<h2 id="_descarga_del_zip_para_la_entrega">4. Descarga del .zip para la entrega</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Recuerda que para la entrega de cada práctica, debes descargar el <code>.zip</code> del repositorio GitHub y subirlo en la actividad correspondiente de Aula Virtual.</p>
@@ -1071,10 +1071,13 @@ pre.rouge {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshooting_solución_de_problemas">Troubleshooting: Solución de problemas</h2>
+<h2 id="_troubleshooting">5. Troubleshooting</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>En esa sección se documentará la solución a los problemas que vayan apareciendo.</p>
+</div>
 <div class="sect2">
-<h3 id="_running_on_a_jre_rather_than_a_jdk">Running on a JRE rather than a JDK</h3>
+<h3 id="_running_on_jre_rather_than_jdk">5.1. Running on JRE rather than JDK</h3>
 <div class="paragraph">
 <p>Si en la ejecución de Maven, en la consola de aparece el siguiente error:</p>
 </div>
