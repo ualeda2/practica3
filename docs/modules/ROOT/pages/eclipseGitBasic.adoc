@@ -3,6 +3,7 @@ Nombre y título del trabajo
 ////
 = Uso básico de Git y GitHub en Eclipse 
 :navtitle: Introducción
+:sectnums:
 
 // Bloque para GitHub, para que al visualizar el .adoc encuentre las figuras.
 ifdef::env-github[]
@@ -20,12 +21,8 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 ////
 == Objetivos
 ====
-* Descripción de las operaciones básicas de Git y GitHub desde Eclipse
+* Descripción deel uso básico de Git y GitHub desde Eclipse. Resume las operaciones más importantes para empezar a trabajar con repositorios Git y GitHub en Eclipse.
 ====
-
-== Introducción
- 
-Este tutorial pretende explicar el uso básico de Git y GitHub desde Eclipse. Resume las operaciones más importantes para empezar a  trabajar con repositorios Git y GitHub en Eclipse.
 
 == Creación del repositorio Git local 
 
@@ -72,7 +69,7 @@ Escribimos un mensaje apropiado con los cambios que hemos hecho, y click en Comm
 Los archivos ya están guardados en la rama `main` en el repositorio git *local*.
 
 
-== Configuración del remoto de GitHub y subida con `push`
+== Configuración del remoto y `push`
 
 Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio (_privado_). 
 
