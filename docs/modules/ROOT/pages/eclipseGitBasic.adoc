@@ -71,8 +71,6 @@ Los archivos ya están guardados en la rama `main` en el repositorio git *local*
 
 == Configuración del remoto y `push`
 
-Primero, en nuestra cuenta de GitHub, creamos un nuevo repositorio (_privado_). 
-
 En Eclipse, sobre el proyecto, Team / Push Branch 'main'...
 
 [#fig7]
