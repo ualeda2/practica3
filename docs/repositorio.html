@@ -673,6 +673,8 @@ pre.rouge {
 <li><a href="#_troubleshooting">5. Troubleshooting</a>
 <ul class="sectlevel2">
 <li><a href="#_running_on_jre_rather_than_jdk">5.1. Running on JRE rather than JDK</a></li>
+<li><a href="#_umldoclet_compiled_by_a_more_recent_version_java">5.2. UMLDoclet compiled by a more recent version Java</a></li>
+<li><a href="#_java_home_is_not_correctly_set">5.3. JAVA_HOME is not correctly set</a></li>
 </ul>
 </li>
 </ul>
@@ -1083,13 +1085,50 @@ pre.rouge {
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?</pre>
+<pre>[ERROR] ... No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>En Eclipse: <em>Window</em> &gt; <em>Preferences</em> &gt; <em>Java</em> &gt; <em>Installed JREs</em>
 Comprueba que está marcada una instalación de JDK en lugar de un JRE.
 Si no tuvieses instalado un JDK, debes instalarlo. Recomendable <em>OpenJDK-11</em> o superior. Tras instalarlo, debes reiniciar Eclipse y añadirlo a la lista de Installed JREs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_umldoclet_compiled_by_a_more_recent_version_java">5.2. UMLDoclet compiled by a more recent version Java</h3>
+<div class="paragraph">
+<p>Si en la ejecución de Maven, en la consola de aparece el siguiente error:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[ERROR] Exit code: 1 - java.lang.UnsupportedClassVersionError: nl/talsmasoftware/umldoclet/UMLDoclet has been compiled by a more recent version of the Java Runtime ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>El problema está en la versión de JDK. Estais construyendo con JDK1.8, y es necesario al menos <em>JDK11</em>. Recomiendo que instales <em>OpenJDK-11</em>.</p>
+</div>
+<div class="paragraph">
+<p>Para comprobarlo, en Eclipse: <em>Window</em> &gt; <em>Preferences</em> &gt; <em>Java</em> &gt; <em>Installed JREs</em>
+Comprueba que <em>no está marcada</em> una instalación de <em>JDK1.8</em>.
+Si es así, debes instalar <em>OpenJDK-11</em> o superior. Tras instalarlo, debes añadirlo a la lista de Installed JREs (recomendable seleccionarlo como predeterminado).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_java_home_is_not_correctly_set">5.3. JAVA_HOME is not correctly set</h3>
+<div class="paragraph">
+<p>Si en la ejecución de Maven, en la consola de aparece el siguiente error:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[ERROR] ... Unable to find javadoc command: The environment variable JAVA_HOME is not correctly set.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>De nuevo el problema en la versión de Java instalada. Recomiendo que instales <em>OpenJDK-11</em> o superior.
+Cuando instalas JDK-11 se configura la variable de entorno JAVA_HOME. Tras ello, debes añadirlo a la lista de <em>Installed JREs</em>, en <em>Window</em> &gt; <em>Preferences</em> &gt; <em>Java</em> &gt; <em>Installed JREs</em>, y seleccionarlo como predeterminado.</p>
+</div>
+<div class="paragraph">
+<p>Si tras ello el problema persiste, <a href="https://medium.com/@kankvish/fixing-issue-the-environment-variable-java-home-is-not-correctly-set-b5f0b66a84d0">aquí</a> explica como configurar JAVA_HOME manualmente en Eclipse.</p>
 </div>
 </div>
 </div>

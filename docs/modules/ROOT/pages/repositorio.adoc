@@ -261,8 +261,31 @@ En esa sección se documentará la solución a los problemas que vayan aparecien
 
 Si en la ejecución de Maven, en la consola de aparece el siguiente error: 
 
- No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+ [ERROR] ... No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
 
 En Eclipse: _Window_ > _Preferences_ > _Java_ > _Installed JREs_
 Comprueba que está marcada una instalación de JDK en lugar de un JRE. 
 Si no tuvieses instalado un JDK, debes instalarlo. Recomendable _OpenJDK-11_ o superior. Tras instalarlo, debes reiniciar Eclipse y añadirlo a la lista de Installed JREs.
+
+=== UMLDoclet compiled by a more recent version Java 
+
+Si en la ejecución de Maven, en la consola de aparece el siguiente error: 
+
+ [ERROR] Exit code: 1 - java.lang.UnsupportedClassVersionError: nl/talsmasoftware/umldoclet/UMLDoclet has been compiled by a more recent version of the Java Runtime ...
+
+El problema está en la versión de JDK. Estais construyendo con JDK1.8, y es necesario al menos _JDK11_. Recomiendo que instales _OpenJDK-11_.
+
+Para comprobarlo, en Eclipse: _Window_ > _Preferences_ > _Java_ > _Installed JREs_
+Comprueba que _no está marcada_ una instalación de _JDK1.8_. 
+Si es así, debes instalar _OpenJDK-11_ o superior. Tras instalarlo, debes añadirlo a la lista de Installed JREs (recomendable seleccionarlo como predeterminado).
+
+=== JAVA_HOME is not correctly set
+
+Si en la ejecución de Maven, en la consola de aparece el siguiente error: 
+
+ [ERROR] ... Unable to find javadoc command: The environment variable JAVA_HOME is not correctly set.
+
+De nuevo el problema en la versión de Java instalada. Recomiendo que instales _OpenJDK-11_ o superior.
+Cuando instalas JDK-11 se configura la variable de entorno JAVA_HOME. Tras ello, debes añadirlo a la lista de _Installed JREs_, en _Window_ > _Preferences_ > _Java_ > _Installed JREs_, y seleccionarlo como predeterminado.
+
+Si tras ello el problema persiste, https://medium.com/@kankvish/fixing-issue-the-environment-variable-java-home-is-not-correctly-set-b5f0b66a84d0[aquí] explica como configurar JAVA_HOME manualmente en Eclipse. 
