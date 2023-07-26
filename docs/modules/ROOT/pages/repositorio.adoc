@@ -166,7 +166,7 @@ La ejecución habrá sido correcta cuando el texto mostrado en la consola finali
 
 Los archivos JavaDoc generados tras la ejecución de Maven se guardan de forma predeterminada en la carpeta `target/site/apidocs`. Para ver su contenido, abre el archivo `index.html` de esa carpeta.
 
-[#fig13]
+[#fig132]
 .JavaDoc, ejemplo de documentación generada
 image::docs_apidocs.png[Javadoc sample:javadoc,width=540,pdfwidth=60%,align="center"]
 
